@@ -1,0 +1,222 @@
+/* =====================
+   MAIN CONTAINER
+===================== */
+#wpot-scoreboard {
+    background: #0f1115;
+    padding: 18px;
+    border-radius: 12px;
+    color: #e5e6ea;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    box-shadow: 0 0 18px rgba(0,0,0,0.35);
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* =====================
+   FILTER BAR
+===================== */
+.wpot-controls,
+.wpot-date-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+#wpot-filter-league,
+#wpot-sort-time,
+#wpot-search,
+#wpot-date-select,
+#wpot-date-custom,
+#wpot-date-apply {
+    background: #181a1f;
+    border: 1px solid #2b2e34;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #bcd7d0;
+    outline: none;
+    font-size: 13px;
+}
+
+#wpot-search {
+    width: 180px;
+}
+
+/* focus style neon */
+#wpot-search:focus,
+#wpot-filter-league:focus,
+#wpot-date-select:focus {
+    border-color: #00ffc6;
+}
+
+/* apply button */
+#wpot-date-apply {
+    cursor: pointer;
+    background: #2a3946;
+}
+
+/* =====================
+   TABLE
+===================== */
+#wpot-scoreboard table.wpot-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#wpot-scoreboard table.wpot-table thead tr {
+    background: #15171c;
+}
+
+#wpot-scoreboard table.wpot-table th {
+    padding: 12px 6px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #b6b6b6;
+    letter-spacing: 0.4px;
+}
+
+/* BODY ROWS */
+#wpot-scoreboard table.wpot-table tbody tr {
+    background: #181b20;
+    border-bottom: 1px solid #23252b;
+    transition: background 0.2s;
+}
+
+#wpot-scoreboard table.wpot-table tbody tr:hover {
+    background: #1e2228;
+}
+
+/* CELLS */
+#wpot-scoreboard table.wpot-table td {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* SCORE column */
+#wpot-scoreboard table.wpot-table td:nth-child(4) {
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* ODDS column */
+#wpot-scoreboard table.wpot-table td:nth-child(6) {
+    color: #ffd057;
+    font-weight: 500;
+}
+
+/* STATUS cell */
+#wpot-scoreboard table.wpot-table td.status {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 4px 10px;
+    display: inline-block;
+}
+
+/* =====================
+   STATUS COLORS
+===================== */
+#wpot-scoreboard tr.match-live td.status {
+    background: #ff3d3d21;
+    color: #ff5a5a;
+}
+
+#wpot-scoreboard tr.match-finished td.status {
+    background: #3dff9230;
+    color: #42ff94;
+}
+
+#wpot-scoreboard tr.match-scheduled td.status {
+    background: #008cff2a;
+    color: #4db8ff;
+}
+
+/* =====================
+   LOADING
+===================== */
+#wpot-loading.wpot-loading {
+    padding: 12px;
+    background: #181b20;
+    border-radius: 6px;
+    color: #7b7d83;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+/* TABLE SCROLL on TABLET/MOBILE */
+@media (max-width: 900px) {
+    #wpot-scoreboard .wpot-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* STACK FILTERS */
+@media (max-width: 700px) {
+    .wpot-controls,
+    .wpot-date-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #wpot-search {
+        width: 100%;
+    }
+}
+
+/* MOBILE COMPACT */
+@media (max-width: 520px) {
+    #wpot-scoreboard table.wpot-table th,
+    #wpot-scoreboard table.wpot-table td {
+        padding: 6px 4px;
+        font-size: 12px;
+    }
+
+    #wpot-scoreboard table.wpot-table td:nth-child(4) {
+        font-size: 14px;
+    }
+}
+
+/* EXTREME MOBILE – Convert to Cards */
+@media (max-width: 420px) {
+    #wpot-scoreboard table.wpot-table {
+        display: none;
+    }
+
+    /* CARD layout */
+    .wpot-card {
+        background: #181b20;
+        border-radius: 10px;
+        padding: 10px 12px;
+        margin-bottom: 10px;
+        border: 1px solid #23252b;
+    }
+
+    .wpot-card .row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        margin: 3px 0;
+    }
+
+    .wpot-card .status {
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
