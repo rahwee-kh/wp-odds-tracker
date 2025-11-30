@@ -1,9 +1,0 @@
-[30-Nov-2025 05:48:48 UTC] PHP Parse error:  syntax error, unexpected token "private", expecting end of file in C:\Users\ACER\Herd\wordpress\wp-content\plugins\wp-odds-tracker\includes\class-wpot-crawler.php on line 110
-[30-Nov-2025 06:31:49 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in C:\Users\ACER\Herd\wordpress\wp-content\plugins\wp-odds-tracker\templates\scoreboard.php on line 48
-[30-Nov-2025 06:31:50 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in C:\Users\ACER\Herd\wordpress\wp-content\plugins\wp-odds-tracker\templates\scoreboard.php on line 48
-[30-Nov-2025 06:33:11 UTC] Automatic updates starting...
-[30-Nov-2025 06:33:11 UTC]   Automatic plugin updates starting...
-[30-Nov-2025 06:33:11 UTC]   Automatic plugin updates complete.
-[30-Nov-2025 06:33:13 UTC] Automatic updates complete.
-[30-Nov-2025 06:36:16 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in C:\Users\ACER\Herd\wordpress\wp-content\plugins\wp-odds-tracker\templates\scoreboard.php on line 48
-[30-Nov-2025 06:36:17 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in C:\Users\ACER\Herd\wordpress\wp-content\plugins\wp-odds-tracker\templates\scoreboard.php on line 48

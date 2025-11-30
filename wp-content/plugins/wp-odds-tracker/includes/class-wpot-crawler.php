@@ -70,7 +70,7 @@ class WPOT_Crawler {
 
         // Save as "today"
         $date = date('Y-m-d');
-        set_transient('wpot_matches_' . $date, $normalized, 10 * MINUTE_IN_SECONDS);
+        set_transient('wpot_matches_' . $date, $normalized, 15 * MINUTE_IN_SECONDS);
 
         update_option('wpot_last_update', current_time('timestamp'));
         update_option('wpot_last_error', '');

@@ -39,6 +39,18 @@ class WPOT_Frontend {
 
         $matches = get_transient($cache_key);
 
+        // Fallback if not cached
+        if ($matches === false) {
+            $matches = WPOT_Crawler::fetch();
+        }
+
+        // Still empty? Show message
+        if (empty($matches)) {
+            return "<div>No matches available right now.</div>";
+        }
+
+
+
         // debug
         // echo '<pre>';
         // print_r(WPOT_Crawler::fetch());

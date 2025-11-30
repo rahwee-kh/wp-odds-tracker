@@ -173,9 +173,7 @@
         align-items: stretch;
     }
 
-    #wpot-search {
-        width: 100%;
-    }
+   
 }
 
 /* MOBILE COMPACT */
@@ -191,32 +189,69 @@
     }
 }
 
-/* EXTREME MOBILE – Convert to Cards */
-@media (max-width: 420px) {
-    #wpot-scoreboard table.wpot-table {
-        display: none;
+
+
+/* =====================
+   TABLE DEFAULT
+===================== */
+#wpot-scoreboard table.wpot-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* -------------------------
+   TABLE SCROLL ON SMALL SCREEN
+-------------------------- */
+@media (max-width: 900px) {
+    #wpot-scoreboard .wpot-table-wrapper {
+        overflow-x: auto;
+        display: block;
+        -webkit-overflow-scrolling: touch;
     }
 
-    /* CARD layout */
-    .wpot-card {
-        background: #181b20;
-        border-radius: 10px;
-        padding: 10px 12px;
-        margin-bottom: 10px;
-        border: 1px solid #23252b;
-    }
-
-    .wpot-card .row {
-        display: flex;
-        justify-content: space-between;
-        font-size: 13px;
-        margin: 3px 0;
-    }
-
-    .wpot-card .status {
-        padding: 4px 8px;
-        border-radius: 6px;
-        font-size: 12px;
-        font-weight: 600;
+    #wpot-scoreboard .wpot-table {
+        min-width: 800px; /* prevent table crushing */
+        white-space: nowrap;
     }
 }
+
+
+
+/* Desktop style */
+.wpot-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+}
+
+#wpot-controls select,
+#wpot-controls input {
+    flex: 0 0 auto;
+}
+
+/* Mobiles — stack filters vertically */
+@media (max-width: 700px) {
+    .wpot-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .wpot-controls select,
+    .wpot-controls input {
+        width: 100%;
+    }
+
+
+    
+    .team-search {
+        width: 100%;
+    }
+
+}
+
+
